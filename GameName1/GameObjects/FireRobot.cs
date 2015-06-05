@@ -99,10 +99,10 @@ namespace Mono
         {
             _textureFireRobot = content.Load<Texture2D>("FireRobot");
         }
+
         public override string ToString()
         {
             return base.ToString() + ";" + _health;
         }
-
     }
 }

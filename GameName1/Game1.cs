@@ -39,6 +39,20 @@ namespace Mono
 
             // Create a new SpriteBatch, which can be used to draw textures.
             _spriteBatch = new SpriteBatch(GraphicsDevice);
+            //Load the sprite of all the gameobjects!
+            LoadContents();         
+
+            //TODO: DENK HIER TERUG OVER NA!
+            Screen._height = 1376;
+            Screen._width = 3328;
+            GameObject.MaxWidth = 3328;
+
+            _level = new Begin();
+
+        }
+
+        private void LoadContents()
+        {
             Begin.LoadContent(this.Content);
             Speler.LoadContent(this.Content);
             BulletPlayer.LoadContent(this.Content);
@@ -70,17 +84,7 @@ namespace Mono
             Background.LoadContent(this.Content);
             Score.LoadContent(this.Content);
             PrimitiveDrawing.LoadContent(this.Content);
-
-            //TODO: DENK HIER TERUG OVER NA!
-            Screen._height = 1376;
-            Screen._width = 3328;
-            GameObject.MaxWidth = 3328;
-
-            _level = new Begin();
-
         }
-
-
 
         protected override void Update(GameTime gameTime)
         {
@@ -96,7 +100,6 @@ namespace Mono
             //The return value is het nieuwe level of hetzelfde level!
             ButtonCheck.Update();
             _level = _level.Update(gameTime);     //Update every object + CheckCollision with every object (tile, enemy, bullet)
-            
         }
 
         protected override void Draw(GameTime gameTime)

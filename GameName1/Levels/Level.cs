@@ -189,7 +189,7 @@ namespace Mono
         public override GameLoop Update(GameTime g)
         {
 
-            #region Death (Spel opnieuw opstarten)
+            #region Death (Reboot Game)
             if (_speler.Death)
             {
                 if (!Pauze)
@@ -217,7 +217,7 @@ namespace Mono
                     if (this is Level2)
                         return new Begin(true);
                     //return new Level3(_speler);
-                    //Voorbeeld voor als er extra Levels zouden bijkomen!
+                    //Example if you want an another level
                 }
 
                 else if (!Pauze)
@@ -462,8 +462,8 @@ namespace Mono
 
         public override void Teken(SpriteBatch spriteBatch)
         {
-            //BUG!!!! Problemen op AMD systemen!
-            //Als het gepauzeerd wordt moet er ook niet meer getekent worden! Beter voor de performantie!!!
+            //BUG!!!! Problems on AMD systems!
+            //If you paused the game, then you shouldn't be drawn anymore better for performance!!!
             //if (!_pauze)
             //{
             _background.Draw(spriteBatch);
@@ -502,9 +502,6 @@ namespace Mono
                 _text.Draw(spriteBatch);
 
         }
-
-
-
     }
 
     enum Sleutels

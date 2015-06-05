@@ -18,9 +18,5 @@ namespace Mono
                 UpdateEvent(NewX, NewY);
             }
         }
-    
-
-
     }
-
 }
