@@ -33,7 +33,7 @@ namespace Mono
 
         public bool Damage { get; set; }
 
-        public virtual void Teken(SpriteBatch spriteBatch)
+        public virtual void Draw(SpriteBatch spriteBatch)
         {
             Positie.Y -= RectangleActive.Height;
             spriteBatch.Draw(TextureActive, Positie, RectangleActive, Color.White);      //Teken vanaf de onderkant van de afbeelding i.p.v. de bovenkant

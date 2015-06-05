@@ -147,7 +147,7 @@ namespace Mono
         {
             Ticks += g.ElapsedGameTime.Milliseconds;
 
-            #region Landen
+            #region Land
             
             if (!Land)
                 _oldLand = false;       //_oldLand is een variabele die zorgt dat er niet constant in de functionaliteit hieronder wordt gegaan!
@@ -192,7 +192,7 @@ namespace Mono
             }
             #endregion
 
-            #region UpdateFunctionaliteit
+            #region UpdateFunctionality
             if (Die == false)
             {
                 if (_reload > 0 && Ticks >= 66)
@@ -381,7 +381,7 @@ namespace Mono
             else if (_reload < 1)
             {
                 _shoot = true;
-                _reload = 5; //Settings reload time (Smaller time -> More bullets / seconds)
+                _reload = 5;        //Settings reload time (Smaller time -> More bullets / seconds)
             }
         }
 
@@ -430,7 +430,7 @@ namespace Mono
         }
 
 
-        public override void Teken(SpriteBatch spriteBatch)
+        public override void Draw(SpriteBatch spriteBatch)
         {
             if (_teller % 2 != 0)
             {
@@ -439,15 +439,15 @@ namespace Mono
 
             else
             {
-                base.Teken(spriteBatch);
+                base.Draw(spriteBatch);
             }
 
             foreach (Leven f in _levens)
             {
-                f.Teken(spriteBatch);
+                f.Draw(spriteBatch);
             }
 
-            _score.Teken(spriteBatch);
+            _score.Draw(spriteBatch);
         }
 
         public void AddLive()

@@ -18,7 +18,7 @@ namespace Mono
             RectangleCollision = new Rectangle(LocationX, LocationY, RectangleActive.Width, RectangleActive.Height);
         }
 
-        public override void Teken(SpriteBatch spriteBatchsp)
+        public override void Draw(SpriteBatch spriteBatchsp)
         {
             //DO NOTHING!
         }

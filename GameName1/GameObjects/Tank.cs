@@ -81,9 +81,9 @@ namespace Mono
             }
         }
 
-        public override void Teken(SpriteBatch spriteBatch)
+        public override void Draw(SpriteBatch spriteBatch)
         {
-            base.Teken(spriteBatch);
+            base.Draw(spriteBatch);
 
             if (_health < 3)
             {

@@ -466,40 +466,40 @@ namespace Mono
             //Als het gepauzeerd wordt moet er ook niet meer getekent worden! Beter voor de performantie!!!
             //if (!_pauze)
             //{
-            _background.Teken(spriteBatch);
-            _endDoor.Teken(spriteBatch);
+            _background.Draw(spriteBatch);
+            _endDoor.Draw(spriteBatch);
 
             foreach (GameObject g in tileObjecten)
             {
-                g.Teken(spriteBatch);
+                g.Draw(spriteBatch);
                 //PrimitiveDrawing.DrawRectangle(spriteBatch, g.RectangleCollision, Color.White);
             }
 
 
             foreach (RemoveGameObject r in _bonusObjecten)
             {
-                r.Teken(spriteBatch);
+                r.Draw(spriteBatch);
             }
 
             foreach (Enemy g in _enemyList)
             {
-                g.Teken(spriteBatch);
+                g.Draw(spriteBatch);
                 //PrimitiveDrawing.DrawRectangle(spriteBatch, g.RectangleCollision, Color.White);
             }
 
             foreach (MoveGameObject t in _bulletList)
             {
-                t.Teken(spriteBatch);
+                t.Draw(spriteBatch);
             }
 
-            _speler.Teken(spriteBatch);
+            _speler.Draw(spriteBatch);
             //PrimitiveDrawing.DrawRectangle(spriteBatch, _speler.RectangleCollisionHead, Color.Red);
             //PrimitiveDrawing.DrawRectangle(spriteBatch, _speler.RectangleCollisionFeet, Color.Purple);
             //PrimitiveDrawing.DrawRectangle(spriteBatch, _speler.RectangleCollision, Color.Orange);
             //}
 
             if (_text != null)
-                _text.Teken(spriteBatch);
+                _text.Draw(spriteBatch);
 
         }
 

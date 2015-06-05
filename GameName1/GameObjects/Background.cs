@@ -31,7 +31,7 @@ namespace Mono
             _picBackground = content.Load<Texture2D>("Background");
         }
 
-        public override void Teken(SpriteBatch spriteBatch)
+        public override void Draw(SpriteBatch spriteBatch)
         {
             //Overidden omdat background vanaf 0,0 getekend moet worden!
             spriteBatch.Draw(TextureActive, Positie, RectangleActive, Color.White);      

@@ -23,7 +23,7 @@ namespace Mono
             _fontText = content.Load<SpriteFont>("Font");
         }
 
-        public override void Teken(SpriteBatch spriteBatch)
+        public override void Draw(SpriteBatch spriteBatch)
         {
             //Zwart kaderje rond de tekst!
             spriteBatch.DrawString(_fontText, Print, new Vector2(Positie.X + 2, Positie.Y + 2), Color.Black);

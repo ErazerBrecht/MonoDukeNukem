@@ -31,7 +31,7 @@ namespace Mono
             _fontScore = content.Load<SpriteFont>("Font"); 
         }
 
-        public override void Teken(SpriteBatch spriteBatch)
+        public override void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.DrawString(_fontScore, "Score: " + ScoreString, Positie, Color.White);
         }
