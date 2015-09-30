@@ -14,7 +14,7 @@ I share the code for education purposes.
 # Sound / Crash
 If the game crashes the main cause is problably the sound engine!
 You need to install OpenAl
-http://www.openal.org/creative-installers/
+https://www.openal.org/downloads/ (Just use the installer)
 
 # Game Controller
 It also supports the XBOX 360 controller
